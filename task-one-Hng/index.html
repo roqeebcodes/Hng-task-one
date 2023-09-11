@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Profile Page</title>
+    
+</head>
+<body>
+    <div class="container">
+        <p data-testid="slackUserName">Roqeebcodes</p>
+
+        <img src="profile-img.jpg" alt="roqeebcodes" data-testid="slackDisplayImage">
+
+        <h6 id="currentDay" data-testid="currentDayOfTheWeek"></h6>
+
+        <h6 id="currentTime" data-testid="currentUTCTime"></h6>
+
+        <p data-testid="myTrack">Track: Frontend</p>
+
+        <a href="http://" data-testid="githubURL">Github Repo</a>
+
+        <script>
+            //To display the current day of the week
+            var currentDay = new Date();
+        
+            var daysOfTheWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    
+            document.getElementById("currentDay").innerHTML = daysOfTheWeek[currentDay.getDay()];
+        
+            //To display current UTC Time in milliseconds
+        
+            var currentTime = new Date();
+        
+            document.getElementById("currentTime").innerHTML = currentTime.getTime();
+            
+            console.log('hello');
+        </script>
+    </div>
+    
+
+</body>
+
+</html>
